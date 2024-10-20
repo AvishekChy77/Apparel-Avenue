@@ -1,7 +1,7 @@
 const Reviews = () => {
   return (
     <div className="my-10">
-      <h2 className=" font-YSerif mb-5 text-2xl md:text-4xl font-bold text-blue-800">
+      <h2 className=" font-YSerif mb-5 text-2xl md:text-4xl font-bold text-[#016A70]">
         Reviews
       </h2>
       <div className="flex gap-5 flex-col md:flex-row">
@@ -34,7 +34,7 @@ const Reviews = () => {
               checked
             />
           </div>
-          <h2 className=" text-lg font-bold text-blue-800">
+          <h2 className=" text-lg font-bold text-[#016A70]">
             Fantastic Fit and Style
           </h2>
           <p className=" flex-grow text-black">
@@ -42,7 +42,7 @@ const Reviews = () => {
             these jeans. They are now my go-to choice for both casual and
             semi-formal occasions."`}
           </p>
-          <p className="text-blue-800">THAD J.</p>
+          <p className="text-[#016A70]">THAD J.</p>
         </div>
         <div className=" rounded shadow-lg bg-slate-50 p-3 flex flex-col">
           <div className="rating rating-sm">
@@ -73,7 +73,7 @@ const Reviews = () => {
               checked
             />
           </div>
-          <h2 className=" text-lg font-bold text-blue-800">
+          <h2 className=" text-lg font-bold text-[#016A70]">
             Cozy and Comfortable
           </h2>
           <p className=" flex-grow text-black">
@@ -81,7 +81,7 @@ const Reviews = () => {
             It keeps me warm in colder weather without sacrificing style. A
             must-have for fall and winter!"`}
           </p>
-          <p className="text-blue-800">Rena A.</p>
+          <p className="text-[#016A70]">Rena A.</p>
         </div>
         <div className=" rounded shadow-lg bg-slate-50 p-3 flex flex-col">
           <div className="rating rating-sm">
@@ -112,7 +112,7 @@ const Reviews = () => {
               checked
             />
           </div>
-          <h2 className=" text-lg font-bold text-blue-800">
+          <h2 className=" text-lg font-bold text-[#016A70]">
             Timeless Vintage Style
           </h2>
           <p className=" flex-grow text-black">
@@ -120,7 +120,7 @@ const Reviews = () => {
             classic with a vintage twist. The relaxed fit and cozy lining make
             it ideal for everyday wear."`}
           </p>
-          <p className="text-blue-800">M. Jordan</p>
+          <p className="text-[#016A70]">M. Jordan</p>
         </div>
       </div>
     </div>

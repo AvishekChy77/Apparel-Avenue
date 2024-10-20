@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   const handleSignOut = () => {
     logOut()
@@ -13,10 +13,18 @@ const Navbar = () => {
   };
   const Navbar = (
     <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/AddProduct">Add Product</NavLink>
-      <NavLink to="/myCart">My Cart</NavLink>
-      <NavLink to="/register">Register</NavLink>
+      <NavLink className="text-sm 2xl:text-base" to="/">
+        Home
+      </NavLink>
+      <NavLink className="text-sm 2xl:text-base" to="/AddProduct">
+        Add Product
+      </NavLink>
+      <NavLink className="text-sm 2xl:text-base" to="/myCart">
+        My Cart
+      </NavLink>
+      <NavLink className="text-sm 2xl:text-base" to="/register">
+        Register
+      </NavLink>
     </>
   );
   return (
@@ -46,9 +54,9 @@ const Navbar = () => {
             {Navbar}
           </ul>
         </div>
-        <div className="font-YSerif flex items-center text-xl md:text-2xl lg:text-3xl font-bold">
+        <div className="font-YSerif flex items-center text-xl md:text-2xl 2xl:text-3xl font-bold">
           <img
-            className=" -ml-2 w-14 md:w-16"
+            className=" -ml-2 w-14 2xl:w-16"
             src="https://i.ibb.co/nwrZCg0/double-a-letter-logo.png"
             alt=""
           />
@@ -92,7 +100,9 @@ const Navbar = () => {
           </div>
         ) : (
           <NavLink to="/login">
-            <button className="btn btn-sm btn-ghost">LogIn</button>
+            <button className="btn btn-sm bg-[#2c8388] hover:bg-[#016A70] text-white">
+              LogIn
+            </button>
           </NavLink>
         )}
       </div>
