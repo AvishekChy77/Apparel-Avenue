@@ -6,7 +6,7 @@ const AllBrands = ({ brands }) => {
       <h2 className="text-center font-bold text-xl md:text-2xl lg:text-4xl text-[#016A70]">
         Buy from your favourite Brand
       </h2>
-      <div className="grid  grid-cols-1 md:grid-cols-2 gap-7 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 mt-10">
         {brands.map((Sbrand) => (
           <Brand
             key={Sbrand._id}

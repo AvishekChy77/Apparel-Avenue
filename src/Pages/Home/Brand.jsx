@@ -8,11 +8,11 @@ const Brand = ({ Sbrand, animation }) => {
       data-aos={animation}
       data-aos-easing="linear"
       data-aos-duration="1800"
-      className="rounded-md  p-2 bg-base-100 shadow-xl"
+      className="rounded-lg p-2 bg-base-100 hover:bg-slate-50 shadow-xl"
     >
-      <img className="h-52 w-full object-cover " src={image} alt="" />
+      <img className="h-44 w-[80%] mx-auto" src={image} alt="" />
       <div className="flex flex-col justify-center items-center">
-        <h2 className="text-center mb-5 font-semibold text-xl md:text-2xl lg:text-3xl">
+        <h2 className="text-center my-5 font-semibold text-xl lg:text-2xl">
           {brand}
         </h2>
         <Link to={`/brand/${_id}`}>
