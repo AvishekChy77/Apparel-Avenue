@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 const Banner = () => {
   return (
-    <div className="">
+    <div>
       <Swiper
         // install Swiper modules
         modules={[Autoplay, Pagination, A11y]}

@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { A11y, Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Product from "./Product";
 import Navbar from "./Shared/Navbar";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
 const BrandDetails = () => {
   const [getProduct, setGetProduct] = useState();
   const brands = useLoaderData();
@@ -31,90 +37,28 @@ const BrandDetails = () => {
       <h2 className=" text-xl md:text-3xl mt-10 mb-5 font-semibold">
         TRENDING CLASSICS: SHOP THE LOOK
       </h2>
-      <div className="carousel mb-10 w-full">
-        <div id="slide1" className="carousel-item relative w-full">
-          <div
-            className="w-full h-56 md:h-96 lg:h-[85vh] relative rounded"
-            style={{
-              backgroundImage: `url(${img1})`,
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a
-              onClick={() => scrollToSlide("#slide4")}
-              href="#slide4"
-              className="btn btn-circle "
-            >
-              ❮
-            </a>
-            <a
-              onClick={() => scrollToSlide("#slide2")}
-              href="#slide2"
-              className="btn btn-circle "
-            >
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          <div
-            className="w-full h-56 md:h-96 lg:h-[85vh] relative rounded"
-            style={{
-              backgroundImage: `url(${img2})`,
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a
-              onClick={() => scrollToSlide("#slide1")}
-              href="#slide1"
-              className="btn btn-circle "
-            >
-              ❮
-            </a>
-            <a
-              onClick={() => scrollToSlide("#slide3")}
-              href="#slide3"
-              className="btn btn-circle "
-            >
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide3" className="carousel-item relative w-full">
-          <div
-            className="w-full h-56 md:h-96 lg:h-[85vh] relative rounded"
-            style={{
-              backgroundImage: `url(${img3})`,
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a
-              onClick={() => scrollToSlide("#slide2")}
-              href="#slide2"
-              className="btn btn-circle "
-            >
-              ❮
-            </a>
-            <a
-              onClick={() => scrollToSlide("#slide1")}
-              href="#slide1"
-              className="btn btn-circle "
-            >
-              ❯
-            </a>
-          </div>
-        </div>
-      </div>
-      <h2 className=" text-xl md:text-3xl my-5 font-semibold">
+      <Swiper
+        // install Swiper modules
+        modules={[Autoplay, Pagination, A11y]}
+        spaceBetween={50}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      >
+        <SwiperSlide>
+          <img className="h-[85vh] w-full object-cover" src={img1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className=" h-[85vh] w-full object-cover" src={img2} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className=" h-[85vh] w-full object-cover" src={img3} alt="" />
+        </SwiperSlide>
+      </Swiper>
+      <h2 className="text-center text-xl md:text-3xl mt-20 mb-10 font-semibold">
         Available {brand} Products
       </h2>
       <div className="grid mb-10 justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

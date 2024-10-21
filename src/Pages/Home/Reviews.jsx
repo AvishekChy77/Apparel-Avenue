@@ -1,10 +1,10 @@
 const Reviews = () => {
   return (
-    <div className="my-10">
-      <h2 className=" font-YSerif mb-5 text-2xl md:text-4xl font-bold text-[#016A70]">
+    <div className="my-20">
+      <h2 className="text-center font-bold text-xl md:text-2xl lg:text-4xl text-[#016A70]">
         Reviews
       </h2>
-      <div className="flex gap-5 flex-col md:flex-row">
+      <div className="mt-10 flex gap-5 flex-col md:flex-row">
         <div className=" rounded shadow-lg bg-slate-50 p-3 flex flex-col">
           <div className="rating rating-sm">
             <input

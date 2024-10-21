@@ -2,11 +2,11 @@ import Brand from "./Brand";
 
 const AllBrands = ({ brands }) => {
   return (
-    <div className="my-16 max-w-4xl p-4 mx-auto">
-      <h2 className="text-center mb-10 font-semibold text-xl md:text-2xl lg:text-3xl">
+    <div className="my-20 max-w-4xl p-4 mx-auto">
+      <h2 className="text-center font-bold text-xl md:text-2xl lg:text-4xl text-[#016A70]">
         Buy from your favourite Brand
       </h2>
-      <div className="grid  grid-cols-1 md:grid-cols-2 gap-7 ">
+      <div className="grid  grid-cols-1 md:grid-cols-2 gap-7 mt-10">
         {brands.map((Sbrand) => (
           <Brand
             key={Sbrand._id}
