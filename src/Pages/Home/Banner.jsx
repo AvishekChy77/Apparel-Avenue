@@ -21,10 +21,18 @@ const Banner = () => {
         }}
       >
         <SwiperSlide>
-          <img className="h-[90vh] w-full object-cover" src={slide1} alt="" />
+          <img
+            className="h-[35vh] md:h-[50vh] lg:h-[90vh] w-full object-cover"
+            src={slide1}
+            alt=""
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img className=" h-[90vh] w-full object-cover" src={slide2} alt="" />
+          <img
+            className="h-[35vh] md:h-[50vh] lg:h-[90vh] w-full object-cover"
+            src={slide2}
+            alt=""
+          />
         </SwiperSlide>
       </Swiper>
     </div>
